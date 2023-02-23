@@ -8,13 +8,13 @@ pipeline {
             }
         }
     }
-        stage('Build') {
+        stage('Test') {
             steps {
                 dir('/var/jenkins_home/workspace/aws-node/aws-nodejs-eb') {
                     /* execute commands in the scripts directory */
         }
             }
-        stage('Test') {
+        stage('Deploy') {
             steps {
                 sh 'npm start'
             }
