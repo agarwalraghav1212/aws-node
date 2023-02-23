@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'node app.json'
+                sh 'npm start'
             }
         }
     }
