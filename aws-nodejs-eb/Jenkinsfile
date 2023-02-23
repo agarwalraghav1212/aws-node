@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
                 sh 'npm i'
             }
         }
     }
-        stage('Test') {
+        stage('Build') {
             steps {
                 dir('/var/jenkins_home/workspace/aws-node/aws-nodejs-eb') {
                     /* execute commands in the scripts directory */
