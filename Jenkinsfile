@@ -2,22 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('git clone ') {
             steps {
-                sh 'npm i'
+                sh 'cd /desktop/aws-node'
+                sh 'pwd'
             }
         }
-        stage('Build') {
+        stage('build ') {
             steps {
-                dir('/var/jenkins_home/workspace/aws-node/aws-nodejs-eb') {
-                    /* execute commands in the scripts directory */
+                sh 'npm install'
+            }
         }
-        stage('Test') {
+        stage('deploy ') {
             steps {
-                sh 'npm start'
+                sh 'npm start  app.js'
             }
         }
     }
-}
-}
 }
