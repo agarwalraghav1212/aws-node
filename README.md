@@ -1,1 +1,1 @@
-# aws-node
+# AWS Elastic Beanstalk NodeJS application template
