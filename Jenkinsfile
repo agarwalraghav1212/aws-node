@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('git clone ') {
+        stage('git clone https://github.com/agarwalraghav1212/aws-node.git') {
             steps {
                 sh 'cd /desktop/aws-node'
                 sh 'pwd'
@@ -15,7 +15,7 @@ pipeline {
         }
         stage('deploy ') {
             steps {
-                sh 'npm start  app.js'
+                sh 'pm2 start  app.js'
             }
         }
     }
